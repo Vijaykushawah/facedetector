@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block bodyblock %}
+<div class="container bg-white">
+    <div class="container">
+      <br><br>
+    <h3 class="font-weight-bold text-info">Gender Classification</h3>
+    </div>
+    <div class="container2">
+        <br>
+        <form action="#" method="post" enctype="multipart/form-data">
+            <label for="upload">UPLOAD TO PREDICT</label>
+            <input type="file" id="upload" name="image" required="true"><br><br>
+            <input class="bg-info text-white" type="submit" value="UPLOAD & PREDICT">
+            <a class="btn btn-outline-primary bg-success text-white" href="{{ url_for('faceapplive') }}">LIVE PREDICT</a>
+        </form>
+<br>
+
+    </div>
+
+    {% if fileupload  %}
+<br><br>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6" id="predict">
+                <img src="{{ url_for('static',filename='uploads/')}}{{ img_name }}" alt="" width="{{ w }}" height="300">
+            </div>
+            <div class="col-md-6" id="predict">
+                <img src="{{ url_for('static',filename='predict/')}}{{ img_name }}" alt="" width="{{ w }}" height="300">
+            </div>
+        </div>
+    </div>
+<br><br><br><br>
+    <style>
+        #predict{
+            border: solid;
+            color:#002f4d;
+            text-align: center;
+        }
+    </style>
+{% else %}
+<br><br><br><br>
+<br><br><br><br>
+    {% endif %}
+</div>
+{% endblock %}

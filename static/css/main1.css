@@ -1,0 +1,12 @@
+.content{
+    color: #002f4d;
+}
+.navright{
+  float:right;
+}
+body{
+  background-image: url('{{url_for('static',filename='images/background.png')}}');background-attachment: fixed;
+ background-size: cover;
+ background-position: center;
+ background-opacity:0.1;
+}

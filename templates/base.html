@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/main1.css') }}">
+    <script src="{{ url_for('static',filename='js/main1.js') }}" ></script>
+    <title>FaceDetector</title>
+  </head>
+  <body style="background-image: url('{{url_for('static',filename='images/background.PNG')}}');background-attachment: fixed;
+ background-size: cover;
+ background-position: center;
+ background-opacity:0.1;">
+
+    <div class="container bg-info">
+            <nav class="navbar navbar-expand-lg navbar-light text-white bg-info">
+                <a class="navbar-brand" href="{{ url_for('home') }}">
+
+                    <img src="{{url_for('static',filename='images/logo.png')}}" alt="" width="150" height="50">
+                <span class="font-weight-bold text-white">  <b>  FACE DETECTOR</b></span>
+
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse navright" style="float:right;" id="navbarNavAltMarkup">
+                  <div class="navbar-nav text-white " style="float:right;">
+                    <a class="nav-item nav-link text-white " href="{{ url_for('home') }}">HOME <span class="sr-only">(current)</span></a>
+                    <a class="nav-item nav-link text-white " href="{{ url_for('faceapp') }}">FACEAPP</a>
+
+
+                  </div>
+                </div>
+              </nav>
+        </div>
+
+
+    {% block bodyblock %}
+
+
+
+    {% endblock %}
+    {% include 'footer.html' %}
+    <style>.scrolltop1 {
+
+  background-attachment: scroll;
+background-clip: border-box;
+background-color: rgba(0, 0, 0, 0);
+background-image: url('{{url_for('static',filename='images/love.PNG')}}');
+url(../images/love.png)#scrollUp
+background-origin: padding-box;
+background-position-x: 0%;
+background-position-y: 0%;
+background-repeat-x: ;
+background-repeat-y: ;no-repeat;
+background-size: auto;
+bottom: 50px;
+box-sizing: border-box;
+color: rgb(255, 255, 255);
+cursor: pointer;
+display: block;
+font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+font-size: 25px;
+height: 63px;
+line-height: 0px;
+position: fixed;
+right: 0px;
+text-align: center;
+text-decoration-color: rgb(255, 255, 255);
+text-decoration-line: none;
+text-decoration-style: solid;
+text-size-adjust: 100%;
+transition-delay: 0s;
+transition-duration: 0.5s;
+transition-property: all;
+transition-timing-function: cubic-bezier(0, 0, 0, 1);
+width: 70px;
+z-index: 2147483647;
+-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+</style>
+    <a onclick="topFunction()" id="scrolltop1" class="scrolltop1  shape main-bg new-angle " ><i class="fa fa-angle-up text-white"></i></a>
+
+  </body>
+</html>

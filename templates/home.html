@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block bodyblock %}
+
+<div class="container bg-white">
+        <br><br>
+        <h3 class="content"> Welcome to <span style="color:#198b90">Face Detector</span></h3>
+    <br>
+        <p>
+            FaceDetector is a classification problem's solution.End User need to upload sample image.
+            We have prepared trained model to detect and classify image based on eyes,nose,mouth orientation.
+        </p>
+        <img src="{{url_for('static',filename='images/facedetectorworking.png')}}">
+<br><br>
+<a class="btn btn-outline-primary bg-success text-white" href="{{ url_for('gender') }}">TRY IT NOW</a>
+    <br><br><br><br>
+</div>
+{% endblock %}
